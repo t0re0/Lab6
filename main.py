@@ -1,3 +1,5 @@
+# i'm adding a comment. welcome to the password scramble/unscrambler!
+
 # define encoded passwd
 def encode_password(password):
     encoded_password = ""  # initialize empty string
