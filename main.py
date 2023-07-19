@@ -9,6 +9,14 @@ def encode_password(password):
         encoded_password += encoded_digit
     return encoded_password
 
+def decoder(encoded_password):
+    original = ''
+    for num in encoded_password:
+        num = int(num) - 3
+        if num < 0:
+            num += 10
+        original += str(num)
+    return original
 
 # add decoder fn here :)
 
@@ -34,7 +42,8 @@ if __name__ == '__main__':
                 print("Invalid password. Please enter an 8-digit integer password.")
 
         elif option == 2:   # add the decoder part of the menu
-
+            print("Now to decode the Password. Thinking...")
+            print("The original password is:", decoder(encoded_password)) # showing the original password via decoder function
         elif option == 3:  # exit program
             print("Exiting the program.")
             break
